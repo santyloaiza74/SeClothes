@@ -26,10 +26,10 @@ const VentasSchema={
         type: DataTypes.INTEGER
     }
 }
-class Ventas extends Model{
+class Venta extends Model{
     static associate(models){}
     static config(sequelize){
         return {sequelize, tableName: VENTAS_TABLE, modelName: 'venta', timestamps:false}
     }
 }
-module.exports= {VENTAS_TABLE,VentasSchema,Ventas}
+module.exports= {VENTAS_TABLE,VentasSchema,Venta}

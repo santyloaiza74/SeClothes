@@ -21,7 +21,7 @@ router.get('/:id', async(req,res)=>{
 router.post('/', async (req,res)=>{
     const {name,lastname,email,addres,phone}=req.body
     const vendedor=await controller.create({name,lastname,email,addres,phone})
-    res.status(201).json({user})
+    res.status(201).json({vendedor})
 })
 
 router.put('/:id', async (req,res)=>{

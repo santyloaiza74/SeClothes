@@ -19,10 +19,10 @@ const PujasSchema={
         type: DataTypes.INTEGER
     }
 }
-class Pujas extends Model{
+class Puja extends Model{
     static associate(models){}
     static config(sequelize){
         return {sequelize, tableName:PUJAS_TABLE, modelName: 'puja',timestamps: false}
     }
 }
-module.exports= {PUJAS_TABLE,PujasSchema,Pujas}
+module.exports= {PUJAS_TABLE,PujasSchema,Puja}
