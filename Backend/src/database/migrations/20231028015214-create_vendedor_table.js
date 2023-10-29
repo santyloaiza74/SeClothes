@@ -7,7 +7,7 @@ module.exports = {
     await queryInterface.createTable(VENDEDOR_TABLE,{
       id:{
         type: DataTypes.INTEGER,
-        auntoIncrement: true,
+        autoIncrement: true,
         primaryKey: true
     },
     name:{

@@ -5,7 +5,7 @@ const VENDEDOR_TABLE= 'vendedors'
 const VendedorSchema ={
     id:{
         type: DataTypes.INTEGER,
-        auntoIncrement: true,
+        autoIncrement: true,
         primaryKey: true
     },
     name:{
