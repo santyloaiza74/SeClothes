@@ -2,7 +2,7 @@ const {models}=require('../libs/sequelize')
 
 class VentaService{
     constructor(){
-        this.model= models.Venta
+        this.model= models.venta
     }
     async getAll(){
         const ventas= await this.model.findAll()

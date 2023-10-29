@@ -2,7 +2,7 @@ const {models}=require('../libs/sequelize')
 
 class CarritoService{
     constructor(){
-        this.model=models.Carrito
+        this.model=models.carrito
     }
     async getAll(){
         const carritos= await this.model.findAll()
