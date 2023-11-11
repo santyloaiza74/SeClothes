@@ -15,12 +15,12 @@ class VendedorController{
         }
         return vendedor
     }
-    async create(name,lastname,email,addres,phone){
-        const vendedor = await this.service.create(name,lastname,email,addres,phone)
+    async create(name,lastname,email,address,phone){
+        const vendedor = await this.service.create(name,lastname,email,address,phone)
         return vendedor
     }
     async update(id, values){
-        const vendedor = this.service.update(id,values)
+        const vendedor = await this.service.update(id,values)
         if(!vendedor){
             throw new Error('Vendedor no encontrado')
         }

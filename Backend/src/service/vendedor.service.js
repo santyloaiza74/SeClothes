@@ -12,8 +12,8 @@ class VendedorService{
         const vendedor=await this.model.findByPk(id)
         return vendedor
     }
-    async create(name,lastname,email,addres,phone){
-        const vendedor= await this.model.create({name,lastname,email,addres,phone})
+    async create(name,lastname,email,address,phone){
+        const vendedor= await this.model.create({name,lastname,email,address,phone})
         return vendedor
     }
     async update(id,values){
