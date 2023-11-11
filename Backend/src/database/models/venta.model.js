@@ -15,15 +15,6 @@ const VentasSchema={
     price:{
         type: DataTypes.FLOAT,
         allowNull: true
-    },
-    producto_id:{
-        type: DataTypes.INTEGER
-    },
-    vendedor_id:{
-        type: DataTypes.INTEGER
-    },
-    comprador_id:{
-        type: DataTypes.INTEGER
     }
 }
 class Venta extends Model{

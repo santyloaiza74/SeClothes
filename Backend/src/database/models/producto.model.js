@@ -30,13 +30,12 @@ const ProductoSchema={
     categoria:{
         type: DataTypes.STRING,
         allowNull: true
-    },
-    subasta_id:{
-        type: DataTypes.INTEGER
     }
 }
 class Producto extends Model{
-    static associate(models){}
+    static associate(models){
+        this.hasOne(models.Subasta,{as:'subasta',foreignKey:'producto_id'})
+    }
     static config(sequelize){
         return {sequelize, tableName: PRODUCTO_TABLE, modelName: 'Producto', timestamps: false}
     }

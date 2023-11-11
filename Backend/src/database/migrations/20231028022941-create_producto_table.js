@@ -32,9 +32,6 @@ module.exports = {
       categoria: {
         type: DataTypes.STRING,
         allowNull: true
-      },
-      subasta_id: {
-        type: DataTypes.INTEGER
       }
     })
   },

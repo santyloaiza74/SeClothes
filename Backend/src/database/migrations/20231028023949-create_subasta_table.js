@@ -25,12 +25,6 @@ module.exports = {
       price_end: {
         type: DataTypes.FLOAT,
         allowNull: true
-      },
-      producto_id: {
-        type: DataTypes.INTEGER
-      },
-      pujas_id: {
-        type: DataTypes.INTEGER
       }
     })
   },

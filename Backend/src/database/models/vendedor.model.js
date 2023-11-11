@@ -16,6 +16,11 @@ const VendedorSchema ={
         type: DataTypes.STRING,
         allowNull: true
     },
+    documento:{
+        type: DataTypes.STRING,
+        allowNull:true,
+        unique:true
+    },
     email:{
         type: DataTypes.STRING,
         allowNull: true,

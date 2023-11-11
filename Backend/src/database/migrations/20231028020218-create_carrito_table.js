@@ -9,12 +9,6 @@ module.exports = {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
-      },
-      comprador_id: {
-        type: DataTypes.INTEGER
-      },
-      producto_id: {
-        type: DataTypes.INTEGER
       }
     })
   },

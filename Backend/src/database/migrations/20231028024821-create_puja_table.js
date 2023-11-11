@@ -13,12 +13,6 @@ module.exports = {
       precio: {
         type: DataTypes.FLOAT,
         allowNull: true
-      },
-      subasta_id: {
-        type: DataTypes.INTEGER
-      },
-      producto_id: {
-        type: DataTypes.INTEGER
       }
     })
   },

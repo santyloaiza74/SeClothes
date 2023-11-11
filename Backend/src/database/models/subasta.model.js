@@ -25,14 +25,19 @@ const SubastaSchema={
         allowNull:true
     },
     producto_id:{
-        type: DataTypes.INTEGER
-    },
-    pujas_id:{
-        type: DataTypes.INTEGER
+        field: 'productoid',
+        type: DataTypes.INTEGER,
+        references:{
+            model: 'productos',
+            key: 'id'
+        }
     }
 }
 class Subasta extends Model{
-    static associate(models){}
+    static associate(models){
+        this.hasMany(models.Puja,{as:'puja',foreignKey:'subastaid'})
+        this.belongsTo(models.Producto,{as:'porducto',foreignKey:'producto_id'})
+    }
     static config(sequelize){
         return {sequelize, tableName: SUBASTA_TABLE, modelName: 'subasta',timestamps: false}
     }

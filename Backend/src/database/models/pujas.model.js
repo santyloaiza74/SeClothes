@@ -13,14 +13,18 @@ const PujasSchema={
         allowNull: true
     },
     subasta_id:{
-        type:DataTypes.INTEGER
-    },
-    producto_id:{
-        type: DataTypes.INTEGER
+        field: 'subastaid' ,
+        type:DataTypes.INTEGER,
+        reference:{
+            model: 'subastas',
+            key: 'id'
+        }
     }
 }
 class Puja extends Model{
-    static associate(models){}
+    static associate(models){
+        this.belongsTo(models.Subasta,{as:'subasta',foreignKey:'subasta_id'})
+    }
     static config(sequelize){
         return {sequelize, tableName:PUJAS_TABLE, modelName: 'puja',timestamps: false}
     }
