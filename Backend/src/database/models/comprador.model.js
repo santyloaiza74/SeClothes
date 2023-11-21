@@ -32,7 +32,9 @@ const CompradorSchema ={
     }
 }
 class Comprador extends Model{
-    static associate(models) {}
+    static associate(models) {
+        
+    }
     static config(sequelize){
         return {sequelize,tableName:COMPRADOR_TABLE,modelName: 'Comprador',timestamps: false}
     }

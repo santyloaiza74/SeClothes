@@ -18,7 +18,9 @@ const VentasSchema={
     }
 }
 class Venta extends Model{
-    static associate(models){}
+    static associate(models){
+        
+    }
     static config(sequelize){
         return {sequelize, tableName: VENTAS_TABLE, modelName: 'venta', timestamps:false}
     }

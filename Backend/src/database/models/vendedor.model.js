@@ -37,7 +37,9 @@ const VendedorSchema ={
     }
 }
 class Vendedor extends Model{
-    static associate(models) {}
+    static associate(models) {
+        
+    }
     static config(sequelize){
         return {sequelize,tableName:VENDEDOR_TABLE,modelName: 'Vendedor',timestamps: false}
     }
